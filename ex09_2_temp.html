@@ -37,7 +37,26 @@
 				clear : both ;				
 			}
 		</style>
- 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#img1").hide();
+				$("#sel1").change(function(){
+					console.log($(this).val());
+					val selVal = $(this).val();
+					
+					switch(selVal){
+						case "google":
+							loc = "./img/google.png"
+							url = "https://www.google.com"
+							$("#a1").attr("href", url);
+							$("#img1").attr("src", loc);
+							$("#img1").show();
+							break;
+					}
+				});
+			});
+		</script>
 	</head>
 	<body>
 		<div class="box1">jQuery</div>
@@ -51,7 +70,7 @@
 				<option value="google">구글</option>
 				<option value="naver">네이버</option>
 				<option value="daum">다음</option>
-			</section>
+			</select>
 		</form>
 	</body>
 </html>

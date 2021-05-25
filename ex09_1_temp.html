@@ -33,7 +33,54 @@
 				clear : both ;				
 			}
 		</style>
- 
+ 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(".box2").hide();
+				$("#bt1").click(function(){
+					$(".box2").show();
+				});
+				$("#bt2").click(function(){
+					$(".box2").hide();
+				});
+				$("#bt3").click(function(){
+					$(".box2").toggle();
+				});
+				$("#d1").on({
+					mouseenter : function(){
+						$(this).css({"background-color":"red"})
+					},
+					mouseleave : function(){
+						$(this).css({"background-color":"white"})
+					},
+					click : function(){
+						alert($(this).text());
+					}
+				})
+				$("#d2").on({
+					mouseenter : function(){
+						$(this).css({"background-color":"green"})
+					},
+					mouseleave : function(){
+						$(this).css({"background-color":"white"})
+					},
+					click : function(){
+						alert($(this).text());
+					}
+				})
+				$("#d3").on({
+					mouseenter : function(){
+						$(this).css({"background-color":"blue"})
+					},
+					mouseleave : function(){
+						$(this).css({"background-color":"white"})
+					},
+					click : function(){
+						alert($(this).text());
+					}
+				})
+			});
+		</script>
 	</head>
 	<body>
 		<div class="box1">jQuery</div>
