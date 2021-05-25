@@ -43,12 +43,27 @@
 				$("#img1").hide();
 				$("#sel1").change(function(){
 					console.log($(this).val());
-					val selVal = $(this).val();
+					var selVal = $(this).val();
 					
 					switch(selVal){
 						case "google":
 							loc = "./img/google.png"
 							url = "https://www.google.com"
+							$("#a1").attr("href", url);
+							$("#img1").attr("src", loc);
+							$("#img1").show();
+							break;
+							
+						case "naver":
+							loc = "./img/naver.png"
+							url = "https://www.naver.com"
+							$("#a1").attr("href", url);
+							$("#img1").attr("src", loc);
+							$("#img1").show();
+							break;
+						case "daum":
+							loc = "./img/daum.png"
+							url = "https://www.daum.com"
 							$("#a1").attr("href", url);
 							$("#img1").attr("src", loc);
 							$("#img1").show();
